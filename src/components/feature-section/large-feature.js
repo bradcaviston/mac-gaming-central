@@ -6,8 +6,9 @@ import UrlHelper from '../../js/UrlHelper';
 
 const LargeFeature = ({ post }) => {
   let image;
+  const test = null;
 
-  if (post.localFile != null) {
+  if (!post.localFile) {
     image = (
       <Img
         className={LargeFeatureStyles.image}

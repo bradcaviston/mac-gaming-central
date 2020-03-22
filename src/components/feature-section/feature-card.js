@@ -7,7 +7,7 @@ import UrlHelper from '../../js/UrlHelper';
 const FeatureCard = ({ post }) => {
   let image;
 
-  if (post.localFile != null) {
+  if (!post.localFile) {
     image = (
       <Img
         className={FeatureCardStyles.image}
