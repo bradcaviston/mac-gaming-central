@@ -8,18 +8,22 @@ const FeatureSection = ({ posts }) => {
   const mainPost = posts[0];
   const sidePosts = posts.slice(1, 3);
 
+  const sideContent = () => {
+    if (sidePosts.length) {
+      return sidePosts.map((post) => <FeatureCard key={post.id} post={post} />);
+    }
+  };
+
   return (
     <div className={FeatureSectionStyles.feature + ' container is-fullhd'}>
       <div className="columns">
-        <div className="column is-three-quarters">
+        <div className="column is-three-quarters" style={{paddingRight: '0rem'}}>
           {mainPost && 
             <LargeFeature post={mainPost} />
           }
         </div>
           <div className={FeatureSectionStyles.sideColumn + ' column'}>
-            {sidePosts.length && 
-              sidePosts.map((post) => <FeatureCard key={post.id} post={post} />)
-            }
+            {sideContent()}
           </div>
       </div>
     </div>
