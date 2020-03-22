@@ -1,0 +1,45 @@
+@import "../styles/_variables";
+
+.figure {
+    margin-bottom: 1.5rem;
+}
+
+.story-bottom {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: $tablet) {
+  .figure {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .citation {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.container {
+  background-color: white;
+}
+
+.story-header {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.story-section {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 5rem;
+}
+
+.ad-top {
+  padding: .75rem;
+  text-align: center;
+}
+
+.ad-column {
+  text-align: center;
+}

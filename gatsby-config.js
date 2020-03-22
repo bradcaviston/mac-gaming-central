@@ -1,34 +1,45 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Mac Gaming Central`,
+    description: `News, reviews, and guides for all things Mac gaming.`,
+    siteUrl: process.env.URL,
   },
   plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-eslint`,
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // your WordPress source
+        baseUrl: process.env.WP_URL,
+        protocol: `https`,
+        // is it hosted on wordpress.com, or self-hosted?
+        hostingWPCOM: true,
+        // does your site use the Advanced Custom Fields Plugin?
+        useACF: false,
+        auth: {
+          wpcom_app_clientSecret: process.env.WP_CLIENT_SECRET,
+          wpcom_app_clientId: process.env.WP_CLIENT_ID,
+          wpcom_user: process.env.WP_USER,
+          wpcom_pass: process.env.WP_PASSWORD,
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: process.env.GA_TRACKING_ID,
+        anonymize: true
+      }
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-sharp`
   ],
-}
+};

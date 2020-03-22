@@ -1,0 +1,21 @@
+// Import Bulma's initial variables
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+// initial variables
+$arcade-red: rgb(255, 65, 40); // #ff4128
+$arcade-orange: rgb(255, 133, 52);
+
+$primary: $arcade-red;
+$body-family: 'Avenir';
+$body-color: black;
+
+$hr-background-color: $arcade-red;
+$hr-margin: 0rem;
+$hr-height: 4px;
+
+$link-focus-border: $arcade-red;
+$link: $arcade-red;
+
+// import Bulma's derived variables
+@import "../../node_modules/bulma/sass/utilities/derived-variables";

@@ -1,0 +1,68 @@
+@import "../../styles/_variables";
+
+.side-card {
+  max-height: unset;
+  height: 50%;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.feature-card {
+  overflow: hidden;
+  padding-bottom: .5rem;
+  height: 100%;
+}
+
+.figure {
+  position: relative;
+  height: 60%;
+}
+
+.feature-card:hover {
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .info {
+    color: $link;
+  }
+  .title {
+    color: $link;
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .side-card {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    height: unset;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  .text {
+    visibility: hidden;
+    height: 0;
+  }
+  .title {
+    font-size: 1.2rem !important;
+  }
+  .figure {
+    height: 8rem;
+  }
+}
+
+.info {
+  background-color: white;
+  padding: .5rem;
+  height: 40%;
+  color: black;
+}
+
+.title {
+  margin-bottom: 0rem !important;
+}

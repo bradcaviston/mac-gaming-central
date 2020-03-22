@@ -1,0 +1,29 @@
+@import "../styles/variables";
+
+.horizontal-ad {
+  text-align: center;
+  padding: .75rem;
+}
+
+.ad-column {
+  text-align: center;
+}
+
+@media only screen and (max-width: $tablet) {
+  .story-list-header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: $fullhd) {
+  .story-list {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.story-list {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}

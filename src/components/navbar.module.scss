@@ -1,0 +1,17 @@
+@import "../styles/_variables";
+
+.end {
+  margin-right: 1rem;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: $desktop) {
+  .logo {
+    font-size: 2rem;
+    margin-right: 3rem;
+    margin-left: 1rem;
+  }
+}

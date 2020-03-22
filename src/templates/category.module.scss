@@ -1,0 +1,24 @@
+@import "../styles/_variables";
+
+.title {
+  margin-bottom: 0rem !important;
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.story-card {
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: $tablet) {
+  .story-card {
+    height: 7rem;
+  }
+  .story-list-header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
