@@ -21,6 +21,7 @@ function PostSEO({ post, path }) {
   const title = post.title.replace(/&nbsp;/g,' ');
   const description = post.excerpt.replace(/<[^>]*>/g, '');
   const metaDescription = description || site.siteMetadata.description;
+  const url = site.siteMetadata.siteUrl;
 
   return (
     <Helmet
@@ -37,7 +38,7 @@ function PostSEO({ post, path }) {
         // Facebook
         {
           property: `og:url`,
-          content: process.env.URL + path,
+          content: url + path,
         },
         {
           property: `og:type`,
@@ -92,13 +93,13 @@ function PostSEO({ post, path }) {
             "logo": {
               "@type": "ImageObject",
               "height": "60px",
-              "url": "${site.siteMetadata.siteUrl}/images/amp-logo.png",
+              "url": "${url}/images/amp-logo.png",
               "width": "600px"
             }
           }
         }
       `}</script>
-      <link rel="canonical" href={site.siteMetadata.siteUrl + path} />
+      <link rel="canonical" href={url + path} />
     </Helmet>
   );
 }
