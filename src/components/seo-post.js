@@ -99,6 +99,7 @@ function PostSEO({ post, path }) {
           }
         }
       `}</script>
+      <script data-ad-client="ca-pub-6866016391090213" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <link rel="canonical" href={url + path} />
     </Helmet>
   );
