@@ -11,6 +11,7 @@ function PostSEO({ post, path }) {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
@@ -91,13 +92,13 @@ function PostSEO({ post, path }) {
             "logo": {
               "@type": "ImageObject",
               "height": "60px",
-              "url": "${process.env.URL}/images/amp-logo.png",
+              "url": "${site.siteMetadata.siteUrl}/images/amp-logo.png",
               "width": "600px"
             }
           }
         }
       `}</script>
-      <link rel="canonical" href={process.env.URL + path} />
+      <link rel="canonical" href={site.siteMetadata.siteUrl + path} />
     </Helmet>
   );
 }
