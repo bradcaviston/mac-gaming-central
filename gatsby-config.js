@@ -26,7 +26,7 @@ module.exports = {
           wpcom_app_clientId: process.env.WP_CLIENT_ID,
           wpcom_user: process.env.WP_USER,
           wpcom_pass: process.env.WP_PASSWORD,
-        }
+        },
       }
     },
     {
@@ -39,6 +39,13 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`
   ],

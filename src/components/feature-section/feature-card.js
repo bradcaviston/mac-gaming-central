@@ -5,6 +5,20 @@ import FeatureCardStyles from './feature-card.module.scss';
 import UrlHelper from '../../js/UrlHelper';
 
 const FeatureCard = ({ post }) => {
+  let image;
+
+  if (post.localFile != null) {
+    image = (
+      <Img
+        className={FeatureCardStyles.image}
+        fluid={post.featured_media.localFile.childImageSharp.fluid}
+        alt="Feature Image"
+      />
+    );
+  } else {
+    image = <img className={FeatureCardStyles.image} src={post.featured_media.source_url} alt="Feature Image" />;
+  }
+
   return (
     <div className={FeatureCardStyles.sideCard}>
       <Link to={`/${UrlHelper.getPostUrl(post)}`}>
