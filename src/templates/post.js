@@ -88,6 +88,13 @@ export const query = graphql`
       content
       featured_media {
         source_url
+        localFile {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   }

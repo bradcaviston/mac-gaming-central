@@ -10,7 +10,7 @@ const PostCard = ({ post }) => {
   let image;
 
   if ("featured_media" in post) {
-    if (!post.localFile) {
+    if (post.featured_media.localFile) {
       image = <Img className={PostCardStyles.image} fluid={post.featured_media.localFile.childImageSharp.fluid} alt="Story Image" />;
     } else {
       image = <img className={PostCardStyles.image} src={post.featured_media.source_url} alt="Story Image" />;

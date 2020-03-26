@@ -6,15 +6,13 @@ import UrlHelper from '../../js/UrlHelper';
 
 const LargeFeature = ({ post }) => {
   let image;
-  const test = null;
 
-  if (!post.localFile) {
+  if (post.featured_media.localFile) {
     image = (
       <Img
         className={LargeFeatureStyles.image}
         fluid={post.featured_media.localFile.childImageSharp.fluid}
         alt="Feature Image"
-        style={{maxHeight: '35rem'}}
       />
     );
   } else {

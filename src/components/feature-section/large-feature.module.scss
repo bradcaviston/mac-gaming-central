@@ -47,6 +47,9 @@
     height: 150%;
     position: relative !important;
   }
+  .info {
+    margin: 0rem;
+  }
 }
 
 @media only screen and (max-width: $desktop) {
@@ -56,9 +59,6 @@
   }
   .text {
     font-size: 0.75rem;
-  }
-  .info {
-    margin: 0rem;
   }
   .feature-1 {
     margin-bottom: 1rem;

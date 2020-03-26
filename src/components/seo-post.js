@@ -23,6 +23,12 @@ function PostSEO({ post, path }) {
   const metaDescription = description || site.siteMetadata.description;
   const url = site.siteMetadata.siteUrl;
 
+  let imageUrl = post.featured_media.source_url;
+
+  if (post.featured_media.localFile) {
+    imageUrl = url + post.featured_media.localFile.childImageSharp.fluid.src;
+  }
+
   return (
     <Helmet
       htmlAttributes={{
@@ -54,7 +60,7 @@ function PostSEO({ post, path }) {
         },
         {
           property: `og:image`,
-          content: post.featured_media.source_url,
+          content: imageUrl,
         },
         // Twitter
         {
@@ -71,7 +77,7 @@ function PostSEO({ post, path }) {
         },
         {
           property: `twitter:image`,
-          content: post.featured_media.source_url,
+          content: imageUrl,
         }
       ]}
     >
