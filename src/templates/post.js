@@ -29,7 +29,7 @@ const Post = ({ data, path }) => {
         </div>
         <article className={PostStyles.storySection}>
           <div className={PostStyles.storyHeader}>
-            <h1 className="title is-1" dangerouslySetInnerHTML={{__html: post.title }} />
+            <h1 className={PostStyles.title + ' title is-1'} dangerouslySetInnerHTML={{__html: post.title }} />
             <h2 className="subtitle" dangerouslySetInnerHTML={{__html: post.excerpt }} />
             <div>
               Published&nbsp;

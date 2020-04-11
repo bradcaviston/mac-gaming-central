@@ -15,16 +15,18 @@ const FeatureSection = ({ posts }) => {
   };
 
   return (
-    <div className={FeatureSectionStyles.feature + ' container is-fullhd'}>
-      <div className="columns" style={{height: '100%'}}>
-        <div className="column is-three-quarters" style={{paddingRight: '0rem', paddingBottom: '0rem'}}>
+    <div className="container is-fullhd">
+      <div className={FeatureSectionStyles.feature + ' columns is-gapless'}>
+        <div className="column is-three-quarters">
           {mainPost && 
             <LargeFeature post={mainPost} />
           }
         </div>
-          <div className={FeatureSectionStyles.sideColumn + ' column'}>
+        <div className="column">
+          <div className={FeatureSectionStyles.sideColumn}>
             {sideContent()}
           </div>
+        </div>
       </div>
     </div>
   );

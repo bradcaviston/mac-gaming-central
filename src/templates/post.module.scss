@@ -9,17 +9,6 @@
   align-items: center;
 }
 
-@media only screen and (max-width: $tablet) {
-  .figure {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
-  .citation {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
 .container {
   background-color: white;
 }
@@ -42,4 +31,18 @@
 
 .ad-column {
   text-align: center;
+}
+
+@media only screen and (max-width: $tablet) {
+  .figure {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+  .citation {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .title {
+    font-size: 2rem !important;
+  }
 }

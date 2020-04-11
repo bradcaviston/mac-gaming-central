@@ -28,38 +28,9 @@
   }
 }
 
-@media only screen and (max-width: $tablet) {
-  .story-card {
-    height: 7rem;
-  }
-  .info {
-    font-size: .75rem;
-  }
-  .title {
-    font-size: 1.2rem !important;
-  }
-  .text {
-    width: 66% !important;
-
-    p {
-      -webkit-line-clamp: 1 !important;
-    }
-  }
-}
-
-@media only screen and (max-width: $desktop) {
-  .story-card {
-    height: 7rem;
-  }
-  .info {
-    font-size: .75rem;
-  }
-  .title {
-    font-size: 1.2rem !important;
-  }
-  .text {
-    width: 66% !important;
-  }
+.title {
+  font-size: 1.2rem;
+  margin-bottom: .5rem !important;
 }
 
 .figure {
@@ -88,4 +59,39 @@
 
 .info {
   line-height: 1.2;
+}
+
+@media only screen and (max-width: $tablet) {
+  .story-card {
+    height: 7rem;
+  }
+  .info {
+    font-size: .75rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .text {
+    width: 66% !important;
+
+    p {
+      visibility: hidden;
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  .story-card {
+    height: 7rem;
+  }
+  .info {
+    font-size: .75rem;
+  }
+  .text {
+    width: 66% !important;
+
+    p {
+      -webkit-line-clamp: 2;
+    }
+  }
 }

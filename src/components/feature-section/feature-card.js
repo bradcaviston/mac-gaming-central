@@ -32,8 +32,8 @@ const FeatureCard = ({ post }) => {
             <div className={'is-overlay ' + FeatureCardStyles.overlay} />
           </figure>
           <div className={FeatureCardStyles.info}>
-            <h2 dangerouslySetInnerHTML={{__html: post.title }} className={FeatureCardStyles.title + ' title is-size-4'} />
-            <div className="feature-card-text is-size-7" dangerouslySetInnerHTML={{__html: post.excerpt }} />
+            <h2 dangerouslySetInnerHTML={{__html: post.title }} className={FeatureCardStyles.title + ' title is-size-5'} />
+            {/*<div className="feature-card-text is-size-7" dangerouslySetInnerHTML={{__html: post.excerpt }} />*/}
           </div>
         </div>
       </Link>

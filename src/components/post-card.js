@@ -27,7 +27,7 @@ const PostCard = ({ post }) => {
       </figure>
       <div className={PostCardStyles.text + ' column is-three-quarters'}>
         <div className={PostCardStyles.wrapper}>
-          <strong className={PostCardStyles.title + ' title is-size-4'} dangerouslySetInnerHTML={{__html: post.title }} />
+          <div className={PostCardStyles.title + ' title'} dangerouslySetInnerHTML={{__html: post.title }} />
           <div className={PostCardStyles.info} dangerouslySetInnerHTML={{__html: post.excerpt }} />
           <small className={PostCardStyles.small}>
             <time dateTime={post.date}>
